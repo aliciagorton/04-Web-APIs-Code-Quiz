@@ -1,38 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Code Quiz High Score</title>
-    </head>
-      <style>
-       #timer {
-           border: 1px solid #333;
-           padding: 5px;
-           margin: 5px;
-           width: auto;
-       }
-       .question {
-           border: 1px solid #333;
-           padding: 5px;
-           margin: 5px;
-           width: auto;
-       }
-      </style>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+   
+    <style>
+       
+      html,
+      body,
+      .wrapper {
+        font-family: sans-serif; 
+        display:inline-block;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+
+      body {
+        font-family: sans-serif;
+        background-color: #f9fbfd;
+      }
+      .wrapper {
+          padding-top: 30px;
+        width: 800px;
+      }
+
+
+      header {
+        text-align: center;
+        padding: 20px;
+        padding-top: 0px;
+        color: hsl(206, 17%, 28%);
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+      }
+
+      #quiz-header {
+        margin-right: auto;
+        margin-left: auto;
+        width: 200px;
+        
+      }
+    
+      #start-quiz {
+        border: none;
+        background-color: hsl(360, 91%, 36%);
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+        color: hsl(0, 0%, 100%);
+        display: inline-block;
+        font-size: 22px;
+        line-height: 22px;
+        margin: 16px 16px 16px 20px;
+        padding: 14px 34px;
+        text-align: center;
+        cursor: pointer;
+      }
+        
+        
+      p {border: none;
+        border: 5px  lightsteelblue;
+        background-color: lightsteelblue;
+          /* border-radius: 25px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px; */
+        color: hsl(0, 0%, 100%);
+        display: inline-block;
+        font-size: 22px;
+        line-height: 22px;
+        margin: 16px 16px 16px 20px;
+        padding: 14px 34px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .question {
+        padding: 5px;
+        margin: 5px;
+        width: auto;
+      }
+
+      .question p {
+        width: 100%
+      }
+     
+
+    </style>
   </head>
   <body>
-      <div id="timer">
-        <p>Seconds Remaining: 60</p>
-      </div>
-      
+    <div class="wrapper">
+      <header id="timer">
+        <h1>Code Quiz</h1>
+      </header>
       <div id="score"></div>
-
-      <div id="quiz-header">
-        <button id="start-quiz">Start the Quiz</button>
-      </div>
-
+      <div class="card-body">
+        <div id="quiz-header">
+          <button id="start-quiz">Start the Quiz</button>
+        </div>
+      
       <div id="quiz">
-        <h1>Quiz</h1>
 
         <!-- Question #1-->
         <div id="q1" class="question" style="display: none;">
@@ -83,8 +152,15 @@
           <button class="q6-response" value="a4">&lt;js&gt;</button>
           <p id="q5-message" style="display: none;"></p>
         </div>
-
       </div>
-      <script src="script.js"></script>
+      
+
+    </div>
+     
+
+
+    
+    <script src="script.js"></script>
+    
   </body>
 </html>
