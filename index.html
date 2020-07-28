@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Code Quiz High Score</title>
+    </head>
+      <style>
+       #timer {
+           border: 1px solid #333;
+           padding: 5px;
+           margin: 5px;
+           width: auto;
+       }
+       .question {
+           border: 1px solid #333;
+           padding: 5px;
+           margin: 5px;
+           width: auto;
+       }
+      </style>
+  </head>
+  <body>
+      <div id="timer">
+        <p>Seconds Remaining: 60</p>
+      </div>
+      
+      <div id="score"></div>
+
+      <div id="quiz-header">
+        <button id="start-quiz">Start the Quiz</button>
+      </div>
+
+      <div id="quiz">
+        <h1>Quiz</h1>
+
+        <!-- Question #1-->
+        <div id="q1" class="question" style="display: none;">
+          <p>What is the correct syntax for adding comments in JavaScript?</p>
+          <button class="q1-response" value="a1">&lt;!&ndash;This is a comment&ndash;&gt;</button>
+          <button class="q1-response" value="a2">//This is a comment</button>
+          <button class="q1-response" value="a3">-This is a comment</button>
+          <button class="q1-response" value="a4">**This is a comment**</button>
+          <p id="q1-message" style="display: none;"></p>
+        </div>
+
+        <!-- Question #2-->
+        <div id="q2" class="question" style="display: none;">
+          <p>What is the JavaScript syntax for printing values in Console?</p>
+          <button class="q2-response" value="a1">print(5);</button>
+          <button class="q2-response" value="a2">console.log(5);</button>
+          <button class="q2-response" value="a3">console.print(5);</button>
+          <button class="q2-response" value="a4">print.console(5);</button>
+          <p id="q2-message" style="display: none;"></p>
+        </div>
+
+        <!-- Question #3-->
+        <div id="q3" class="question" style="display: none;">
+          <p>How is the function called in JavaScript?</p>
+          <button class="q3-response" value="a1">call Geekfunc();</button>
+          <button class="q3-response" value="a2">call function GeekFunc();</button>
+          <button class="q3-response" value="a3">Geekfunc();</button>
+          <button class="q3-response" value="a4">function Geekfunc();</button>
+          <p id="q3-message" style="display: none;"></p>
+        </div>
+
+        <!-- Question #4-->
+        <div id="q4" class="question" style="display: none;">
+          <p>How to write an 'if' statement for executing code. If "i" is NOT equal to 5?</p>
+          <button class="q4-response" value="a1">if(i != 5)</button>
+          <button class="q4-response" value="a2">if i &lt;&gt; 5</button>
+          <button class="q4-response" value="a3">if(i &lt;&gt; 5)</button>
+          <button class="q4-response" value="a4">if i!=5</button>
+          <p id="q4-message" style="display: none;"></p>
+        </div>
+
+        <!-- Question #5-->
+        <div id="q5" class="question" style="display: none;">
+          <p>What is the HTML tag under which one can write the JavaScript code?</p>
+          <button class="q5-response" value="a1">&lt;javascript&gt;</button>
+          <button class="q5-response" value="a2">&lt;scripted&gt;</button>
+          <button class="q5-response" value="a3">&lt;script&gt;</button>
+          <button class="q6-response" value="a4">&lt;js&gt;</button>
+          <p id="q5-message" style="display: none;"></p>
+        </div>
+
+      </div>
+      <script src="script.js"></script>
+  </body>
+</html>

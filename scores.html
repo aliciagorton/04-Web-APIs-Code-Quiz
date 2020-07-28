@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Game Over!</h1>
+    <div id="player_score"></div>
+    <a href="index.html">Play Again?</a>
+    <h2>Scores</h2>
+    <div id="scores"></div>
+    <hr>
+    <script>
+
+        console.log(localStorage.getItem('js_quiz_current'))
+
+        // display the current users results
+        var data = JSON.parse(localStorage.getItem('js_quiz_current'));
+        document.querySelector("#player_score").innerHTML = `You got ${data["score"]} correct within ${data["time"]} seconds.`;
+
+        // ask the user for their initials
+        var initials = prompt("What are your initials?");
+
+        // create the score object
+        var score = {"time": data["time"], "score": data["score"], "initials": initials};
+
+        var all_time_scores;
+
+        // save the current quiz score to the permanent quiz scores
+        if (localStorage.getItem('js_quiz_scores')){
+          // parse the js_quiz_scores
+          all_time_scores = JSON.parse(localStorage.getItem('js_quiz_scores'));
+
+          // add the score object to the js_quiz_scores array
+          all_time_scores.push(score);
+
+        }
+        else {
+
+          // save the score object to an array within all_time_scorse
+          all_time_scores = [score];
+
+        }
+
+        // save the js_quiz_scores object
+        localStorage.setItem('js_quiz_scores', JSON.stringify(all_time_scores));
+        
+        // clear the current js_quiz_current loacl storage 
+        localStorage.setItem('js_quiz_current', "");
+
+        // grab the scores div
+        var scores = document.querySelector("#scores");
+
+        // render the scores to the user
+        for (i=0; i < all_time_scores.length; i++){
+          // create a paragraph node containing score information
+          var p = document.createElement("p"); 
+          p.innerHTML = `${all_time_scores[i]["initials"]} / ${all_time_scores[i]["time"]} / ${all_time_scores[i]["score"]}`;
+
+          // append the paragraph node to the scores div
+          scores.appendChild(p)
+        }
+
+
+    </script>
+</body>
+</html>
