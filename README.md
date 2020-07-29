@@ -15,6 +15,9 @@ Here we have a JavaScript fundamentals quiz, with five multiple choice questions
 ### Link to deployed application:
 https://aliciagorton.github.io/homeworkfour/
 
+<img width="1256" alt="image1" src="https://user-images.githubusercontent.com/66084311/88767092-fefdc980-d12d-11ea-9948-adc32cf1b8a4.png">
 
-<img width="770" alt="codeQuiz" src="https://user-images.githubusercontent.com/66084311/88727858-50ce3180-d0e5-11ea-8ed7-e561dec42228.png">
+
+<img width="1255" alt="image2" src="https://user-images.githubusercontent.com/66084311/88766942-bf36e200-d12d-11ea-91da-ae7f4e4b863e.png">
+
     
