@@ -10,6 +10,7 @@ var q3_answer = 2;
 var q4_answer = 0;
 var q5_answer = 2;
 
+
 function countDown(){
 
   // only continue the countdown if there are positive seconds
@@ -29,6 +30,7 @@ function countDown(){
 
 function startQuiz(){
   console.log('starting the quiz');
+
   // hide the start button
   document.querySelector("#start-quiz").style.display = "none";
 
@@ -181,8 +183,10 @@ function startQuiz(){
         document.querySelector("#q5-message").style.display = "block";
         // hide this question
         document.querySelector("#q5").style.display = "none";
+        // ask the user for their initials
+        var initials = prompt("What are your initials?");
         // store the current score
-        localStorage.setItem('js_quiz_current', JSON.stringify({"time": seconds_remaining, "score": quiz_score}));
+        localStorage.setItem('js_quiz_current', JSON.stringify({"time": seconds_remaining, "score": quiz_score, "initials": initials}));
         // load the scores.html page when the timer is out
         window.location.href = "scores.html"
       }

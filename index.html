@@ -4,48 +4,70 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Code Quiz</title>
    
     <style>
        
-      html,
-      body,
-      .wrapper {
-        font-family: sans-serif; 
-        display:inline-block;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-
       body {
-        font-family: sans-serif;
-        background-color: #f9fbfd;
-      }
-      .wrapper {
-          padding-top: 30px;
-        width: 800px;
+      font-family: sans-serif;
+      background-color: seashell;
       }
 
-
-      header {
+      h1 {
+        font-size: 50px;
+        color:  rgb(53, 52, 52);
+        margin: auto;
         text-align: center;
-        padding: 20px;
-        padding-top: 0px;
-        color: hsl(206, 17%, 28%);
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px;
+      }
+      #timer {
+        position: absolute;
+        top: 10px;
+        right:10px;
+      } 
+
+      .containter {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      .card-body {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      
+
+      #instructions {
+        margin: auto;
+        width: 50%;
+        height: 50%;
+        text-align: center;
       }
 
       #quiz-header {
         margin-right: auto;
         margin-left: auto;
-        width: 200px;
+        width: 240px;
         
       }
-    
+      #scoreBtn {
+        border: none;
+        background-color: rgb(53, 52, 52);
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+        color: hsl(0, 0%, 100%);
+        display: inline-block;
+        font-size: 10px;
+        line-height: 12px;
+        margin: 8px 8px 8px 10px;
+        padding: 8px 16px;
+        text-align: center;
+        cursor: pointer;
+      }
+
       #start-quiz {
         border: none;
         background-color: hsl(360, 91%, 36%);
@@ -63,11 +85,11 @@
         
         
       p {border: none;
-        border: 5px  lightsteelblue;
-        background-color: lightsteelblue;
+        border: 5px  rgb(225, 235, 248);
+        background-color: rgb(225, 235, 248);
           /* border-radius: 25px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px; */
-        color: hsl(0, 0%, 100%);
+        color: #333;
         display: inline-block;
         font-size: 22px;
         line-height: 22px;
@@ -91,13 +113,20 @@
     </style>
   </head>
   <body>
-    <div class="wrapper">
-      <header id="timer">
-        <h1>Code Quiz</h1>
-      </header>
+    <div id="score">
+      <a href="scores.html" id = "scoreBtn">View High Scores</a>
+
+      <div id="timer"></div>
+    </div>
+    <br>
+    <div class = "container">
+      <h1>Code Quiz</h1>
+    </div>
       <div id="score"></div>
       <div class="card-body">
-        <div id="quiz-header">
+        <p id = "instructions">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!
+        </p>
+       <div id="quiz-header">
           <button id="start-quiz">Start the Quiz</button>
         </div>
       
