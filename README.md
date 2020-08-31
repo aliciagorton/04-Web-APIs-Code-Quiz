@@ -1,4 +1,4 @@
-# 04 Wed APIs: Code Quiz
+# 04 Web APIs: Code Quiz
 
 Here we have a JavaScript fundamentals quiz, with five multiple choice questions and 60 second timer. Watch out, if you miss a question 10 seconds will be deducted from a timer. This app will run in the browser, with a clean and polished interface. 
 
